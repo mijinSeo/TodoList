@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="up_down_game.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <h1>UP & Down Game</h1>
+        <br />
+        <div>🎮🎮🎮🎮🎮🎮🎮🎮🎮</div>
+        <div id="game-helper" class="font">게임을 시작합니다</div>
+        <div>🎮🎮🎮🎮🎮🎮🎮🎮🎮</div>
+        <div id="image">
+            <img src="./gameimage/게임.png" class="main-image"/>
+        </div>
+        
+        <div id="chance-helper" class="font2">( 기회는 5번! )</div>
+        <input
+          type="number"
+          id="user-input"
+          placeholder="1~100까지 숫자 입력"
+        />
+        <div>
+          <button id="go-button">Go!</button>
+          <button id="reset-button">Reset!</button>
+        </div>
+      </div>
+    </div>
+    <script src="up_down_game.js"></script>
+  </body>
+</html>
