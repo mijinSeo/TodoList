@@ -59,6 +59,7 @@ input {
   }
   .main-image{
     width: 30vh;
+    height: 30vh;
     margin: 20px;
   }
 @keyframes animate {
