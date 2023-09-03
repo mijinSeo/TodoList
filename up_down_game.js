@@ -77,6 +77,7 @@ function reset(){
     chance = 5;
     chanceHelp.textContent= `남은기회: ${chance}번`
     history = [];
+    image.src="./gameimage/게임.png"
 }
 
 function focusInput() {
