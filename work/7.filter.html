@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const arr =[10,30,40,50,80,100,30]
+
+        const result1 =arr.filter(item => item>50)
+        console.log(result1)
+
+        const result2 =arr.filter(item => item===30)
+        console.log(result2)
+
+        const result3 =arr.filter(item => item!==30)
+        console.log(result3)
+
+        const data = [
+        { id: 1, name: "수지", age: 27 },
+        { id: 2, name: "민아", age: 28 },
+        { id: 3, name: "은영", age: 29 },
+        { id: 4, name: "명수", age: 20 },
+        { id: 5, name: "사랑", age: 21 },
+      ];
+
+      const data1= data.filter(item => item.id !==3)
+      console.log(data1)
+
+      data.filter((item,index)=> index>2)
+      .map(item=>console.log(item.name))
+
+      const result4 =arr.find(item => item >50)
+      console.log(result4)
+
+      const result5 =arr.findIndex(item => item >50)
+      console.log(result5)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

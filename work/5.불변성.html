@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const arr1 =[10,20,30,40,50]
+
+        arr1.push(60)
+        arr1.push(70)
+        arr1.push(80)
+
+        console.log(arr1)
+        //concat:데이터를 추가 할때 사용(원본은 건들이지 않는다)
+        const arr2 = [10,20,30,40,50]
+        const arr3 = arr2.concat()
+        const arr4 = arr2.concat(60,70,80)
+        console.log('-----------------')
+        console.log(arr2)
+        console.log(arr3)
+        console.log(arr4)
+        
+        console.log('---------------')
+        const arr5 = arr2.slice(1,3)
+        console.log(arr5)
+
+        const data = [
+            {id:1, name:'suzi',age:27},
+            {id:2, name:'suzie',age:28},
+            {id:3, name:'suziee',age:29},
+            {id:4, name:'suzieee',age:20},
+            {id:5, name:'suzieeee',age:21}
+        ]
+
+        const data1 = data.concat()
+        const data2 = data.concat({
+            id:6, name:'mimi',age:21
+        })
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

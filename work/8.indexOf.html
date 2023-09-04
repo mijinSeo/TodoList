@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const arr =['고구마','감자','고기','고단백','수박','수영',]
+        const text1='고'
+
+        const result1 = arr.filter(item => item.indexOf(text1)!==1)
+        console.log(result1)
+
+        const data =[
+            {act:'운동을 하다'},
+            {act:'영화를 보다'},
+            {act:'저녁을 먹다'},
+            {act:'게임을 하다'},
+            {act:'공부를 하다'}
+        ]
+
+        const text2 ='하다'
+        const result2 = data.filter(item=> item.indexOf(text2)!=-1)
+        console.log(result2)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

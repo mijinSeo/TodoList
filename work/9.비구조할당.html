@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const person = {
+            name:'배수지',
+            age: 27
+        }
+
+        console.log(person.name,person.age)
+
+        //비구조 할당
+        const {name,age} =person
+        console.log(name,age)
+
+        const arr ={
+            num1:100,num2:200,num3:300
+        }
+
+        const {num1,num2,num3} =arr
+        console.log(num1,num2,num3)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
