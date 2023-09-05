@@ -53,6 +53,7 @@ function play(){
     }else{
        image.src="./gameimage/tenor.gif";
         gameHelper.textContent="정답입니다!"
+        gameOver =true;
     }
 
     history.push(userNum)
