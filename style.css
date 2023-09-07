@@ -1,47 +1,163 @@
-body{
-    margin: 0;
-    background-image: url("image/puplesky.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+body {
+  margin: 0;
+  background-image: url("image/puplesky.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.container{
-    background-color: white;
-    min-height: 100vh;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-.task-area{
-    border: 1px solid lightgray;
-    margin-top: 2em;
-}
-.task-tabs{
-    display: flex;
-    border-bottom: 1px solid lightgray;
-    position: relative;
+.container {
+  background-color: #ffffffb6;
+  min-height: 100vh;
+  border-top: 10px solid plum;
+  border-bottom: 10px solid plum;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.task-tabs div{
-    padding: 1em;
+h1{
+    font-weight: bold;
+    color: purple;
+}
+.input-style {
+    position: relative;
+    width: 300px;
+    margin-left: 5px;
+    margin-top: 50px;
+  }
+  
+  input {
+    font-size: 15px;
+    color: #222222;
+    width: 300px;
+    border: none;
+    border-bottom: solid #aaa 1px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    position: relative;
+    background: none;
+    z-index: 7;
+  }
+  
+  input::placeholder { color: #aaaaaa; }
+  input:focus { outline: none; }
+  
+  .span-style {
+    display: block;
+    position: absolute;
+    left: 0%;  /* right로만 바꿔주면 오 - 왼 */
+    background-color: #aaa;
+    width: 0;
+    height: 2px;
+    transition: 0.5s;
+  }
+  
+  label {
+    position: absolute;
+    color: #aaa;
+    left: 10px;
+    font-size: 20px;
+    bottom: 8px;
+    transition: all .2s;
+  }
+  
+  input:focus ~ label, input:valid ~ label {
+    font-size: 16px;
+    bottom: 40px;
+    color: #666;
+    font-weight: bold;
+  }
+  
+  input:focus ~ span, input:valid ~ span {
+    width: 100%;
+  }
+
+
+.task-tabs {
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  position: relative;
+}
+.task-done {
+  text-decoration: line-through;
+  background-color: rgb(255, 192, 203, 0.2);
+}
+.task-tabs div {
+  padding: 1em;
 }
 /*  id 주는 이유: 자바스크립트에서도 사용하기 위해 유니크한 id로 줌*/
-#under-line{
-    height: 4px;
-    background-color: pink;
-    position: absolute;
-    width: 70px;
-    left: 0px;
-    top: 52px;
-    padding: 0px;
+#under-line {
+  height: 4px;
+  background-color: pink;
+  position: absolute;
+  width: 70px;
+  left: 0px;
+  top: 52px;
+  padding: 0px;
+  transition: 0.5s;
 }
-.task{
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-}
-
-.task-done{
-    text-decoration: line-through;
+.task {
+  border-bottom: 1px solid lightgray;
+  position: relative;
+  width: 100%;
 }
 
-.task-tabs div{
-    cursor: pointer;
+.task span {
+  align-items: center;
+  padding: 1em;
+}
+
+.task-tabs div {
+  cursor: pointer;
+}
+#add-button {
+  background-color: white;
+  border: none;
+  color: pink;
+  background-color: transparent
+}
+button {
+  background-color: white;
+  border: none;
+  margin-left: 0.2em;
+  padding-top: 3em;
+}
+button :hover{
+    color: purple;
+}
+
+.button-box {
+  display: flex;
+}
+
+.button-box button {
+  height: 100%;
+  width: 5em;
+  border: none;
+}
+
+.chack-none {
+  margin: 0px;
+  color: plum;
+  padding: 1em 2em;
+  background-color: transparent
+}
+.chack-none :hover {
+  color: purple;
+}
+
+.btn-delete {
+  margin-left: auto;
+  padding: 1em 2em;
+  color: rgb(118, 118, 245);
+  background-color: transparent;
+}
+.btn-delete :hover {
+  color: crimson;
+}
+
+.check {
+  margin: 0px;
+  color: purple;
+  padding: 1em 2em;
+  background-color: transparent;
 }

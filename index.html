@@ -10,21 +10,30 @@
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
+    <script src="https://kit.fontawesome.com/f350c9c720.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" />
+    
   </head>
   <body>
     <div class="container">
-      <h1>Todo list</h1>
-      <section class="input-area">
-        <input type="text" id="task-input"/>
-        <button id="add-button">+</button>
+      <br/>
+      <h1>To do List</h1>
+
+      <section style="display: flex;">
+      <div class="input-style">
+        <input type="text" id="task-input" required/>
+        <label>오늘 할 일</label>
+        <span class="span-style"></span>
+      </div>
+      <button id="add-button"><i class="fa-solid fa-square-plus fa-2x"></i></button>
       </section>
+
       <section class="task-area">
         <div class="task-tabs">
           <div id="under-line"></div>
-          <div id="all">모두</div>
+          <div id="all">리스트</div>
           <div id="ongoing">진행중</div>
-          <div id="done">끝남</div>
+          <div id="done">완료</div>
         </div>
         <div id="task-board">
         </div>
