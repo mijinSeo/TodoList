@@ -8,23 +8,25 @@
 //끝남 탭은 끝난 아이템만, 진행중 탭은 진행중인 아이템만
 //전체 탭을 누르면 전테 아이템으로 돌아옴.
 
+//기능보완
+//input박스가 비어 있으면 리스트에 들어가지 않는다.(성공!)
+
 let taskInput = document.getElementById("task-input");
 let addButton = document.getElementById("add-button");
 let tabs = document.querySelectorAll(".task-tabs div");
-let underLine =document.getElementById("under-line");
+let underLine = document.getElementById("under-line");
 let taskList = [];
 let mode = "all";
 let filterList = [];
 
-tabs.forEach(menu=>menu.addEventListener("click",(e)=>tabsunderline(e)))
-
+tabs.forEach((menu) => menu.addEventListener("click", (e) => tabsunderline(e)));
 
 //offsetWidth 아이템의 넓이,dffsetHeight 아이템의 높이,offsetLeft  왼쪽에서 아이템까지 거리,  offsetTop 윗쪽부터 아이템까지의 거리
-function tabsunderline(e){
-  underLine.style.left =e.currentTarget.offsetLeft +"px";
-  underLine.style.width =e.currentTarget.offsetWidth +"px";
+function tabsunderline(e) {
+  underLine.style.left = e.currentTarget.offsetLeft + "px";
+  underLine.style.width = e.currentTarget.offsetWidth + "px";
   underLine.style.top =
-    e.currentTarget.offsetTop + e.curretTarget.dffsetHeight+"px";
+    e.currentTarget.offsetTop + e.curretTarget.dffsetHeight + "px";
 }
 addButton.addEventListener("click", addTask);
 
@@ -42,7 +44,13 @@ function addTask() {
     iscomplete: false,
   };
 
-  taskList.push(task);
+  if (taskInput.value.length == 0) {
+    alert("할 일을 입력해주세요");
+  } else {
+    taskList.push(task);
+    taskInput.value= ""
+  }
+
   console.log(task);
   render();
 }
@@ -117,21 +125,20 @@ function filter(event) {
 
   if (mode == "all") {
     render();
-  } else if (mode == "ongoing") {
+  }else if (mode == "ongoing") {
     for (let i = 0; i < taskList.length; i++) {
       if (taskList[i].iscomplete == false) {
         filterList.push(taskList[i]);
       }
     }
-    render();
-  } else if (mode == "done") {
+  }else if (mode == "done") {
     for (let i = 0; i < taskList.length; i++) {
       if (taskList[i].iscomplete == true) {
         filterList.push(taskList[i]);
       }
     }
-    render();
   }
+  render();
   console.log(filterList);
 }
 
